@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类型转换-布尔值</title>
+    <script>
+
+        /* 
+                1 使用Boolean()函数来将其他类型转换为布尔值
+                    转换的情况：
+                        数字：
+                            除了0 和NaN为false 
+                            其余都为true
+                        字符串：
+                            空串为false,其余为true
+                        null 和undefined 都为false
+                        对象：都会转换为true
+
+        */
+       let a =1 //true
+       let c =0 //false
+       let d=NaN//false
+       let e =Infinity //true
+       let y = -1 //true
+       let u ='abc'//true
+       let i= 'false'//true
+       let q = 'true'//true
+       let o =''//false
+       let p= ' '//true
+       console.log(typeof a,a);
+       let b =Boolean(a)
+       console.log(typeof b,b); 
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
