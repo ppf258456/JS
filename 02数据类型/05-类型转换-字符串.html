@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类型转换-字符串 （强制转换）</title>
+    <script>
+        /* 
+            类型转换指将一种数据类型转换为其他类型
+                将其他类型 转换为（字符串 布尔值 数值）
+
+            转换字符串
+                1 调用tostring()方法将其他类型转换为字符串
+                        调用xxx的yyy方法
+                        -->xxx.yyy()
+
+
+                    toString()  根据变量创建一个字符串
+                    由于原始数据类型不可变
+                    则需要将创建的字符串重新赋值给一个变量使其成为字符串
+                    由于null和undefined没有toString() 方法
+                    所以对这两个东西调用toSting()会报错
+                
+                2 调用String()函数将其他类型转换为字符串
+                        - 调用xxx 函数
+                            --->  xxx()
+                        - 原理：
+                            对于拥有同String()方法的值调用String()函数时，
+                            实际上就是在调用toString()方法
+                        对于null,则直接转换称"null"
+                        对于undefined，直接转换称"undefined"
+        */
+       let a = 10  //"10"
+       let b = true //"true"
+       let e = 11n //"11"
+       
+       console.log(`a=${a}`,typeof a,typeof b,b);
+        let c=  a.toString()
+        let d=  b.toString()
+       console.log(typeof c,c,typeof d,d);
+
+
+       let t= null //"null"
+       let u =undefined //"undefined"
+       console.log(typeof t,t);
+       let y=String(t)
+       console.log(typeof y,y);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
