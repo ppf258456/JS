@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逻辑运算符</title>
+    <script>
+        /* 
+            ! 逻辑非
+                -- ！用来对一个值进行非运算
+                -- 它可以对一个布尔值进行取反操作
+                        true --> false
+                        false--> true
+                        如果对一个非布尔值进行取反，它会先将其转换为布尔值然后再取反
+                            可以利用这个特点 将其他类型转换为布尔值
+
+
+                - 类型转换
+                    转换为字符串
+                        显示转换
+                            String()
+                        隐式转换
+                            +""
+                    转换为数值 
+                        显示转换
+                            Number()
+                        隐式转换
+                            +
+                    转换为布尔值
+                        显示转换
+                            Boolean()
+                        隐式转换
+                            a = !!a 
+            &&  逻辑与
+                    可以对两个值进行与运算
+                    当&&左右都为true时，返回true 否则返回false
+                    与运算时短路的与，如果第一值为false，则不看第二个值
+                    与运算时找false ,如果找到false则直接返回 没有false 才会返回true
+                    对于非布尔值进行运算，它会转换为布尔值然后运算
+                        但最终会返回原值
+                            - 如果第一个值为false,则直接返回第一个值
+                            - 如果第一个值为true,则返回第二个值
+
+            ||  逻辑或
+                    可以对两个值进行或运算
+                        当||左右由true时，则返回true,否则返回false  
+                        或运算时短路的或，如果第一值为true，则不看第二个值
+                        或运算是找true，如果找到true则直接返回，没有true才会返回false
+                    对于非布尔值或运算，它会转换为布尔值然后运算
+                        但最终会返回原值
+                            如果第一个值为true ,则返回第一个
+                            如果第一个值为false,则返回第二个
+        */
+       let r =true && true //true
+       r = true && false  //false
+       r = false && true  //false
+       r = false && false //false
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
