@@ -17,12 +17,17 @@
                     do-while语句在执行时，会先执行do-while后的表达式进行判断
                     如果为false,则循环终止
                     如果为true 则继续执行循环体，以此类推
+                与while区别：
+                        while语句先判断后执行
+                        do-while先执行后判断
+                    实质的区别：
+                        do-while语句可以确保至少执行一次
          */
         let a = 0
-        while(i<5){
-            console.log(i)
-            i++
-        }
+        do{
+            console.log(a)
+            a++
+        }while(a<5)
     </script>        
 </head>
 <body>
