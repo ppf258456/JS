@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习1</title>
+    <script>
+       //prompt  弹出输入框
+       //isNaN() 判断一个值是否为NaN
+       //parseInt 对数值进行取整
+       let a =parseInt( prompt("请输入一个整数"))
+       if(isNaN(a)  || a % 1 !== 0 ){
+        alert("请输入正确的整数")
+       }
+       else{
+        if(a%2===0){
+            alert(`${a}该整数是偶数`)
+       }else{
+        alert(`${a}该整数是一个奇数`)
+       }
+       }
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
