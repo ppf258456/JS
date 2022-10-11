@@ -17,9 +17,17 @@
             /* 
                 在函数中，可以通过return 关键字来指定函数的返回值
                     返回值就是函数的执行结果，函数调用完毕返回值便会作为结果返回
+
+                    任何值都可以作为返回值（包括对象和函数之类）
+                    如果return 后不跟任何值 则相当于返回undefined
+                    不写return 函数返回值依然是undefined
+
+                    return 一执行函数立即结束
             */
-         
+           // return {name:"孙悟空"}
+           // return （）=>alert(123)   
            return true;
+           //return 
         }
         document.write(r)
        // alert(r)
