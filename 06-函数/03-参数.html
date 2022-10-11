@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>参数</title>
+    <script>
+        /* 
+            计算任意两个数和的函数
+            在订购一函数时，可以在函数中指定数量不等的形式参数（形参）
+            在函数中定义参数，就相当于在函数内部声明了对应的变量但没有赋值
+
+            实际参数
+                在调用函数时，可以在函数的()传递数量不等的实参
+                参数：
+                    1 实参数量 = 形参数量
+                        则两种参数一一对应
+                    2 实参数量 > 形参数量
+                        则多余的实参 不会使用
+                    3 实参数量 < 形参数量
+                        则多余的形参 多余的赋值为undefined
+                
+                类型：
+                    JS中不会检查参数的类型，可以传递任何类型的值作为参数        
+
+
+                  1 函数声明
+                    function 函数名([参数]){
+                        语句。。。
+                    }
+                2 函数表达式
+                    const 变量 = function([参数]){
+                            语句。。。
+                    }
+                3 剪头函数
+                    ([参数])=>{
+                        语句
+                    }
+        */
+       function sum ( a , b){
+        console.log(a+b);
+       }
+       sum(20,20)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
