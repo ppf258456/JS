@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象的结构</title>
+    <script>
+
+        /* 
+            对象中存储属性的区域实际有两个
+                1 对象自身
+                    直接通过对象所添加的属性，位于对象自身中
+                    在类中 x = y  的形式添加的属性，位于对象自身中
+                    
+                2 
+        
+        */
+        class Person{
+            name ="嘤嘤嘤"
+
+            sayHello(){
+                console.log("hello,我是"+this.name);
+            }
+        }
+        const p =new Person()
+        console.log(p);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
