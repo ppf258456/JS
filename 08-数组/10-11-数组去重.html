@@ -8,6 +8,30 @@
     <script>
         let    arr = [1,2,1,3,2,4,5,5,6,7]
         //编写代码去除数组中重复的元素
+
+        //获取数组中的元素
+        for(let i =0;i<arr.length;i++){
+           
+           const index= arr.indexOf(arr[i],i+1)
+           if(index != -1){
+            //出现重复内容
+            arr.splice(index,1)
+            i--
+
+           }
+        }
+        console.log(arr);
+
+        //创建空数组
+        const arr2 = []
+        //循环遍历arr数组
+        for(let ccc of arr){
+            //判断arr2中是否存在ccc的值，不存在进行添加
+            if(arr2.indexOf(ccc) === -1){
+                arr2.push(ccc)
+            }
+        }
+        console.log(arr2);
     </script>
 </head>
 <body>

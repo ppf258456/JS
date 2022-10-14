@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒泡排序</title>
+    <script>
+        /* 
+            有一个数组
+            [2,5,1,4,7,9.0.8.6.3]
+            编写代码进行排序
+
+
+        */
+       let arr = [2,5,1,4,7,9,0,8,6,3]
+ /*        for(let j =0; j < arr.length-1; j++){
+            for(let i =0; i< arr.length -j -1 ;i++){
+                if(arr[i] > arr[i+1]){
+                    let temp = arr[i]
+                    arr[i] = arr[i+1]
+                    arr[i + 1] = temp
+                }
+            }
+        }
+      console.log(arr); */
+
+
+     // arr = [2,5,1,4,7,9,0,8,6,3]
+      for(let a =0 ;a < arr.length; a++){
+        for(let b = a+1;b < arr.length; b++){
+            if(arr[a] < arr[b]){
+                let temp = arr[a]
+                arr[a] = arr[b]
+                arr[b] = temp
+            }
+        }
+      }
+      console.log(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

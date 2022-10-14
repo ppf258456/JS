@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数封装</title>
+    <script>
+  /*       let arr = [2,5,1,4,7,9,0,8,6,3]
+        function sort(arr){
+
+            const arr =[...arr]
+            
+            for(let a =0 ;a < arr.length; a++){
+                for(let b = a+1;b < arr.length; b++){
+                        if(arr[a] < arr[b]){
+                            let temp = arr[a]
+                            arr[a] = arr[b]
+                            arr[b] = temp
+            }
+        }
+      } 
+                return arr
+        }
+      let r =  sort(arr)
+        console.log(r);
+ */
+
+
+        class Person{
+        constructor(name,age){
+            this.name = name
+            this.age = age 
+        }
+      }
+
+      let arr1 =[
+        new Person("丁真",18),
+        new Person("1!5!",25),
+        new Person("雪豹",3),
+        new Person("猞猁",6),
+      ]
+
+      function filter(arr){
+
+        const newArr =[]
+
+        for(let c=0;c<arr1.length;c++){
+        if(arr1[c].age>=18){
+            newArr.push(arr[c])
+            console.log(arr1[c]);
+        }
+      }
+      return newArr
+      }
+       let a = filter(arr1)
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
