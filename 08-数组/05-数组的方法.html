@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组方法</title>
+    <script>
+        const arr = [1,2,3,4,5,6]
+        //arr.reduce(pre,item)
+        /* 
+            indexOf()
+                从前往后查
+                获取元素在数组中第一次出现的索引
+                参数：
+                    1 要查询的元素
+                    2 查询的起始位置indexOf(需要查询的数据，从位开始查)
+            lastindexOf()
+                从后往前查
+
+            返回值：
+                找到了则返回元素的索引，
+                没找到返回-1
+
+            join()
+                将一个数组中的元素链接为一个字符串
+                [1,2,3,4,5,6]-->"1","2","3","4","5","6"
+                    参数：
+                        只当一个字符串作为链接符
+            
+            slice()
+                用来截取数组(非破坏性方法)
+                参数：
+                    数组名.slice(下标1，下标2) 取得到下标1，取不到下标3
+                    第二个参数可以省略 不写表示为 从第一个参数开始到结束
+                    索引可以是负值
+                    参数全不写 即全都要（浅拷贝）
+        */
+
+      let r= arr.indexOf(4,2)
+      let c = arr.lastIndexOf(2,4)
+      let b = arr.join()
+      let d = arr.join("@")
+      let h = arr.slice(0,3) 
+      document.write(b,d,h)
+      console.log(r);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
