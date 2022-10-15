@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高阶函数</title>
+     <script>
+        /* 
+                高阶函数
+                    如果一个函数的参数或返回值是函数，则这个函数就称为高阶函数
+                    为什么要将函数作为参数传递？（回调函数的作用）
+                        将函数作为参数，意味着可以对另一个函数动态的传递代码
+        */
+        class Person{
+        constructor(name,age){
+            this.name = name
+            this.age = age 
+        }
+      }
+
+      let arr1 =[
+        new Person("丁真",18),
+        new Person("1!5!",25),
+        new Person("雪豹",3),
+        new Person("猞猁",6),
+      ]
+    
+      function filter(arr,cb){
+
+        const newArr =[]
+
+        for(let c=0;c<arr.length;c++){
+           
+        if(cb(arr[c])){
+            newArr.push(arr[c])
+           
+        }
+      }
+      return newArr
+      }
+
+
+    /*   function fn(a){
+        return a.age < 18
+      } */
+       let a = filter(arr1,a => a.name ==="丁真")
+       let b = filter(arr1,a => a.age >=18)
+       const arr =[1,2,3,4,5,6,7,8,9,0]
+       let c = filter(arr,a => a%2 === 0)
+       console.log(a);
+       console.log(b);
+       console.log(c);
+     </script>
+</head>
+<body>
+    
+</body>
+</html>

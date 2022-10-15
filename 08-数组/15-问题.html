@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小问题</title>
+    <script>
+        
+    
+        class Person{
+        constructor(name,age){
+            this.name = name
+            this.age = age 
+        }
+      }
+
+      let arr1 =[
+        new Person("丁真",18),
+        new Person("1!5!",25),
+        new Person("雪豹",3),
+        new Person("猞猁",6),
+      ]
+    //filter()函数用来对数组进行过滤
+        /* 
+            目前我们的函数只能过滤出数组中age 属性小于18的对象
+                我们希望过滤更加灵活：
+                    比如：过滤数组中age大于18的对象
+                                    age大于60的对象
+                                    age大于n的对象
+                            过滤数组中name为xxx的对象
+                            过滤数组中的偶数
+                            ...
+        */
+      function filter(arr,cb){
+
+        const newArr =[]
+
+        for(let c=0;c<arr1.length;c++){
+            //arr[c].age >=18
+            //arr[c].age >60
+            //arr[c].age > n
+            //arr[c].name ==='xxx'
+        if(cb(arr1[c])){
+            newArr.push(arr[c])
+           
+        }
+      }
+      return newArr
+      }
+
+
+      function fn(a){
+        return a.age < 18
+      }
+       let a = filter(arr1,fn)
+       console.log(a);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

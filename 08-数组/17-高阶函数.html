@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高阶函数</title>
+    <script>
+        function outer(cb){
+            return () =>{
+                console.log("来喽！！！");
+                const r = cb()
+                return r 
+            }
+        }
+        function test(){
+            console.log("0.0~~~~");
+            return "嘿嘿"
+        }
+     
+      let t = outer(test)
+       t() 
+      console.log(t()) ;
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
