@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则语法</title>
+    <script>
+        /* 
+            1 在正则表达式中大部分字符都可以直接写
+            2 | 在正则表达式中表示或
+            3 [a-z] 表示或（字符集）(a到z)
+              [A-Za-z]
+              [A-Za-z0-9]
+            4[^a-z] 表示除了a-z
+            5 . 表示除了换行外的任意字符
+            6 在正则表达式中使用 \作为转义字符
+            7 其他的字符集
+                \w 任意的单词字符 [A-Za-z0-9_]
+                \W 除了单词字符  [^A-Za-z0-9_]
+                \d 任意数字     [0-9]
+                \D 除了数字     [^0-9]
+                \s 空格
+                \S 除了空格
+                \b 单词边界
+                \B 除了单词边界
+            8 开头和结尾
+                ^ 表示字符串的开头
+                $ 表示字符串的结尾
+
+        */
+
+        let re = /ab/
+
+        let result = re.test("abc")  //true
+        let result1 = re.test("acb")    //false
+        console.log(result);
+
+        let re1 =/abc | bcd/
+        let result2 = re.test("abc") //true
+        let result3 = re.test("ab") //false
+        let re2 = /[a-z]/
+        let result4 =re.test("a") //true
+        let result5 = re.test("A") //false
+        let re3 = /[A-Za-z]/  //大小写皆可
+        re = /[a-z]/i  //匹配模式i表示胡罗大小写
+        let re4 =/\./  //判断是否有.
+        let re5 = /^a/  //匹配开始位置的a (a在开头)
+        let re6 = /b$/  //匹配结束位置的b （b在结尾）
+
+        let re7 = /^a$/ //只匹配字母a 完全匹配 要求字符串必须和正则完全一致  aa也报错
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

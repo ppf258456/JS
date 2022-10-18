@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日期格式化</title>
+    <script>
+        /* 
+            参数：
+                1 描述语言和国家信息的字符串
+                    zh-CN 中文中国
+                    en-US 英文美国
+                2 需要一个对象作为参数，在对象中可以通过对象的属性来对日期的格式进行配置
+                    DateStyle 日期的风格
+                    timeStyle 时间的风格
+                        full
+                        long
+                        medium
+                        short
+                        hours12 是否采用12小时   可选值 true false
+                        weekday  星期的显示方式
+                        long   星期五
+                        narrow  五
+                        short   周五
+                    
+                    year
+                        numeric 2022年
+                        2-digit 22年
+        */
+       const d = new Date()
+       let result = d.toLocaleDateString() //将日期转换为本地的字符串
+       result = d.toLocaleTimeString()  //将时间转换为本地的时间 的字符串
+       result = d.toLocaleString("zh-CN",{dateStyle:"short",timeStyle:"short"})   //将时间和日期转换为本地的字符串
+       console.log(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
