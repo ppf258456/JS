@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则表达式</title>
+    <script>
+        /* 
+            量词    
+                {m}正好m个
+                {m,}至少m个
+                {m，n} m 到 n 个
+                +   一个以上，相当于{1，}
+                *   任意数量的a
+                ？  0-1次 {0，1}
+        
+        */
+        let re = /a{3}/
+        let result = re.test("aaaa")
+        console.log(result);
+        let re2 = /^ab{3}$/  //{}允许控制单个字符    表示 abbb
+        let re3 = /^(ab)$/  //（）{}将所需字符用（） 表示一个整体  即 ababab 重复
+        let re4 = /^[a-z]{3}$/  // 三次非字母
+        let re5 = /^[a-z]{1,}$]/ // 表示不少于一个非字母
+        let re6 =/^[a-z]{1,3}$/  //表示1 - 3 个非字母
+        let re7 = /^ba+$/   //表示 b后面至少1个a
+        let re8 = /^ba*$/   //表示 b 后面可以有无限个a也可以没有a
+        let re9 = /^ba?$/   // 表示b 后面最多可以有1个a 可以为0
+        let result2 = re2.test("aaaa")
+        console.log(result2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

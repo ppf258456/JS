@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则表达式 exec方法</title>
+    <script>
+        /* 
+            re.exec()
+                获取字符串中符合正则表达式的内容
+                /条件/i(关闭大小写)g(全局)
+                exec()每次只会匹配一次
+        */
+/*         let str = "abcadcaecafcagc"
+
+        //提出str中符合axc格式的内容
+        let re = /a(([a-z])c)/ig
+        let result = re.exec(str)
+        while(result){
+            console.log(result[0],result[1],result[2])
+            result =re.exec(str)
+        }
+        
+     console.log(result); */
+
+     /* 
+        asjklfajwgo1840290701akfjWEOIJGMN17940261385jkasgjaweoi14726538561fakef
+     */
+        let a = " asjklfajwgo18340290701akfjWEOIJGMN17940261385jkasgjaweoi14726538561fakef"
+        let re3 = /1[3-9]\d{9}/ig
+        re3 = /(1[3-9]\d)\d{4}(\d{4})/ig
+        let t = re3.exec(a)
+        while(t){
+            console.log(t[0],t[1],t[2]);
+            console.log(t[1]+"****"+t[2]);
+            t= re3.exec(a)
+        }  
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
