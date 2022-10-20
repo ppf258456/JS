@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 533px;
+            margin: 100px auto;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <p id="info"></p>
+        <div class="img-wrapper">
+            <img src="../img/1.gif" alt="">
+        </div>
+        <div class="btn-wrapper">
+            <button id="prev">上一张</button>
+            <button id="next">下一张</button>
+        </div>
+    </div>
+    <script>
+        /* 
+            点击按钮，切换图片
+        */
+
+        //将路径存储在数组中
+        const imgArr =[
+        "../img/1.gif",
+        "../img/2.gif",
+        "../img/3.gif",
+        "../img/4.gif",
+        "../img/5.gif"
+        ]
+        //创建变量记录当前图片索引 
+        let current = 0
+        
+       //获取图片
+       const img = document.getElementsByTagName("img")[0]
+       //获取按钮
+       const prev = document.getElementById("prev")
+       const next = document.getElementById("next")
+       const info = document.getElementById("info")
+       
+       info.innerText = `总计${imgArr.length}张，当前第${current +1}张`
+       //点击按钮，切换图片
+       prev.onclick=function(){
+      
+        current--
+        //检查current的值是否合法
+        if(current < 0){
+            current=imgArr.length-1
+        }
+        img.src=imgArr[current]
+        info.innerText =`总计图片:${imgArr.length} 张，当前第${current +1} 张`
+        }
+       next.onclick=function(){
+          
+            current++
+            if(current > imgArr.length-1){
+                current=0
+            }
+          
+        //切换图片  就是修改img的src属性
+            img.src=imgArr[current]
+            info.innerText =`总计图片:${imgArr.length} 张，当前第${current +1} 张`
+       }
+      
+    </script>
+</body>
+</html>

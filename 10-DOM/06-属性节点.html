@@ -18,12 +18,13 @@
                             读取一个布尔值时，会返回true or false
                     修改：元素.属性名 = 值
                 
-                2   读取：
-                    修改：    
+                2   读取：元素.getAttribute("属性名") （不需要修改class为className）
+                    修改：元素.setAttribute("属性名","属性值")
+                    删除：元素.removeAttribute("属性名")   
         */
        const input = document.getElementsByName("username")[0]
        const input1 =document.querySelector("[name=username]")
-       console.log(input.type);
+       console.log(input.setAttribute("value","丁真"));
     </script>
 </body>
 </html>
